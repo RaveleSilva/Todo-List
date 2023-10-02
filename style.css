@@ -94,7 +94,10 @@ body{
   border-radius: 4px;
   color: var(--c2);
   font-size: 18px;
-  border-bottom: 1px solid var(--c5);
+  border-bottom: 1px solid var(--c6);
+  box-shadow: 16px 0px 16px rgba(0, 0, 0, 0.397),
+              -16px 0px 16px rgba(0, 0, 0, 0.397);
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.397);
 }
 
 .list li > input{
