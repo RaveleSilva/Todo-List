@@ -1,0 +1,17 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root{
+  --c0: hsl(235, 21%, 11%);
+  --c1: hsl(235, 24%, 19%);
+  --c2: hsl(234, 39%, 85%);
+  --c3: hsl(236, 33%, 92%);
+  --c4: hsl(234, 11%, 52%);
+  --c5: hsl(233, 14%, 35%);
+  --c6: hsl(237, 14%, 26%);
+}
+
