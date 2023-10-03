@@ -88,7 +88,15 @@ body{
   outline: 0;
 }
 
+.list{
+  overflow: auto;
+  max-height: 400px;
+}
+
 .list li{
+  display: flex;
+  position: relative;
+  align-items: baseline;
   background-color: var(--c1);
   padding: 1rem;
   border-radius: 4px;
@@ -101,7 +109,73 @@ body{
 }
 
 .list li > input{
-  margin-right: 1rem;
+  position: relative;
+  cursor: pointer;
 }
 
+.list li > input::after{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;  
+  border-radius: 50%;
+  position: absolute;
+  left: -3px;
+  bottom: -3px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid var(--c5);
+  background-color: var(--c1);
+}
 
+.list li > input:checked::before{
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;  
+  border-radius: 50%;
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  background-image: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+}
+
+.list li > input:checked:after{
+  background-image: url(images/icon-check.svg);
+  background-color: transparent;
+}
+
+.list li > input:checked + label{
+  text-decoration: line-through;
+  color: var(--c5);
+}
+
+.list li > label{
+  text-transform: capitalize;
+  position: relative;
+  padding: 10px 26px;
+  cursor: pointer;
+}
+
+.list li > span{
+  background-image: url(images/icon-cross.svg);
+  background-size: cover;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .container{
+    padding: 20px;
+  }
+  .list li > span{
+    right: 40px;
+  }
+}
+
+por que a barra de scroll no .list está aparecendo mesmo sem o container estar vazando?
