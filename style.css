@@ -177,3 +177,9 @@ body{
     right: 40px;
   }
 }
+
+@media (max-width: 375px) {
+  body{
+    background-image: url(images/bg-mobile-dark.jpg);
+  }
+}
